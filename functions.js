@@ -4,8 +4,8 @@ let updateStudents = [...students];
 
 
 // mainMenu() function
-// Main menu function which displays all functions
 export function mainMenu(){
+    // Main menu function which displays all functions
     console.log(
 `1/addStudent()
 2/calculateAverage()
@@ -19,8 +19,8 @@ export function mainMenu(){
 
 
 // addStudent(name, scores) function
-// What it does: Adds a new student and shows confirmation.
 export const addStudent = (name, scores) => {
+    // What it does: Adds a new student and shows confirmation.
   const newStudent = {
     id: id++,
     name: name,
@@ -32,8 +32,8 @@ export const addStudent = (name, scores) => {
 }
 
 // calculateAverage(studentId) function
-// What it does: Find a student by ID and return their average score with a nice message.
 export function calculateAverage(studentId) {
+    // What it does: Find a student by ID and return their average score with a nice message.
     const student = students.find(student => student.id === studentId);
     const sum = student.scores.reduce((total, score) => total + score, 0);
     const average = sum / student.scores.length;
@@ -41,8 +41,8 @@ export function calculateAverage(studentId) {
 }
 
 // getAllAverages() function
-// What it does: Shows every student's average score.
 export function getAllAverages(){
+    // What it does: Shows every student's average score.
     console.log("All Student's Averages:")
     for(const student of updateStudents){
         const sum = student.scores.reduce((total, score) => total + score, 0);
@@ -53,8 +53,8 @@ export function getAllAverages(){
 
 
 // getTopPerformers() function
-// What it does: Shows students with average score 80 or above. 
 export function getTopPerformers(){
+    // What it does: Shows students with average score 80 or above. 
     console.log("Top Performers (80+ average):");
      for(const student of updateStudents){
         const average = student.scores.reduce((total, score) => total + score, 0) / student.scores.length;
@@ -65,8 +65,8 @@ export function getTopPerformers(){
 }
 
 // getSummary() function
-// What it does: Shows overall class statistics.
 export function getSummary(){
+    // What it does: Shows overall class statistics.
     console.log("Class Summary:");
     const totalStudents = updateStudents.length;
     console.log("Total Students:", totalStudents);
@@ -94,8 +94,8 @@ export function getSummary(){
 }
 
 // updateScore(studentId, scoreIndex, newScore)
-// What it does: Updates a specific test score for a student.
 export function updateScore(studentId, scoreIndex, newScore){
+    // What it does: Updates a specific test score for a student.
     const student = updateStudents.find(student => student.id === studentId);
     if (student) {
         student.scores[scoreIndex] = newScore;
@@ -108,8 +108,8 @@ export function updateScore(studentId, scoreIndex, newScore){
 }
 
 // printAllStudents() function
-// What it does: Shows all students with their scores.
 export function printAllStudents(){
+    // What it does: Shows all students with their scores.
     console.log("All Students:");
     for(const student of updateStudents){
         console.log(`${student.name} (ID:${student.id}) - Scores: [${student.scores}]`);
