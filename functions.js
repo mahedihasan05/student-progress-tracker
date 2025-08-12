@@ -1,5 +1,5 @@
 import students from "./data.js";
-let id = students.length + 1;
+let id = students.length;
 let updateStudents = [...students];
 
 
@@ -26,7 +26,7 @@ export const addStudent = (name, scores) => {
     name: name,
     scores: scores,
   }
-  console.log(`${name} has been added with ID ${id -1}`);
+  console.log(`${name} has been added with ID ${id}`);
   updateStudents = [...updateStudents, newStudent];
   printAllStudents();
 }
